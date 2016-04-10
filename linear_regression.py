@@ -5,7 +5,9 @@ class linear_regression():
     def __init__(self):
         self.theta = np.matrix('')
         self.history = np.matrix('')
-
+        self.__class__.__doc__ = 'use .fit(data,target) to build(accept np.matrix)optional method alpha as learning rate' \
+                                 'cycle as times you want to cycle' \
+                                 'use .predict (data) to get predictions'
     def cost(self,X = np.matrix(''),y = np.matrix(''),theta = np.matrix('')):
         m = X.shape[0]
         J = ((1/(2 * m)) * (X * theta - y).T *(X * theta -y)).sum()
